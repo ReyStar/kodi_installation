@@ -29,7 +29,7 @@ https://wiki.debian.org/LightDM
 
 #### PS: additional improvements
 ### 5. Disable GRUB showing
-* To speed up KODI loading, you can disable GRUB UI in the /etc/default/group settings.
+* To speed up KODI loading, you can disable GRUB UI in the /etc/default/grub settings.
 ```
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=0
@@ -38,6 +38,9 @@ GRUB_DISABLE_OS_PROBER=true
 GRUB_FORCE_HIDDEN_MENU=true
 GRUB_TERMINAL=console
 ```
+[grub](https://github.com/ReyStar/kodi_installation/blob/master/man/grub)
+
+When crub parameters will changed need execute commnd `update-grub`
 
 ### 6. Disable kodi exit button and splash screen
 * To remove the exit button from the application, which does not make sense, and splash screen, you need to put the configuration file advancedsettings.xml in the `/.kodi/userdata/` directory with the following parameters:
