@@ -16,7 +16,7 @@ https://wiki.debian.org/LightDM
 * For autologin user set in config file `/etc/lightdm/lightdm.conf` next value autologin-user=user
 * For autostart kodi application after user login set in config file `/etc/lightdm/lightdm.conf` next value display-setup-script=kodi
 
-[config example](https://github.com/ReyStar/kodi_installation/blob/master/man/lightdm.conf)
+[lightdm.conf](https://github.com/ReyStar/kodi_installation/blob/master/man/lightdm.conf)
 
 ### 3. Install kodi
 * For kodi installation use command `apt-get install kodi`
@@ -38,4 +38,14 @@ GRUB_DISABLE_OS_PROBER=true
 GRUB_FORCE_HIDDEN_MENU=true
 GRUB_TERMINAL=console
 ```
-[config example](https://github.com/ReyStar/kodi_installation/blob/master/man/grub)
+
+### 6. Disable kodi exit button and splash screen
+* To remove the exit button from the application, which does not make sense, and splash screen, you need to put the configuration file advancedsettings.xml in the `/.kodi/userdata/` directory with the following parameters:
+``` xml
+<advancedsettings>
+  <showexitbutton>false</showexitbutton>
+  <splash>false</splash>
+</advancedsettings>
+```
+[advancedsettings.xml](https://github.com/ReyStar/kodi_installation/blob/master/man/advancedsettings.xml)
+More other options u can see [this](https://kodi.wiki/view/Advancedsettings.xml)
