@@ -24,3 +24,18 @@ https://wiki.debian.org/LightDM
 ### 4. Result
 * Reboot and enjoy
 <img src="https://raw.githubusercontent.com/ReyStar/kodi_installation/master/man/e1a2f19c-0d22-4834-ac6d-324c6464d3b1.png" alt="e1a2f19c-0d22-4834-ac6d-324c6464d3b1.png" width="500"/>
+
+-----------
+
+#### PS: additional improvements
+### 5. Disable GRUB showing
+* To speed up KODI loading, you can disable GRUB UI in the /etc/default/group settings.
+```
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_DISABLE_OS_PROBER=true
+GRUB_FORCE_HIDDEN_MENU=true
+GRUB_TERMINAL=console
+```
+[config example](https://github.com/ReyStar/kodi_installation/blob/master/man/grub)
